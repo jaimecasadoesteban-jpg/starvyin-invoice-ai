@@ -1,0 +1,767 @@
+{
+  "generado": "2026-10-20",
+  "aviso": "Datos FICTICIOS. No usar fuera de pruebas.",
+  "empresas": {
+    "principal": {
+      "nombre": "Farmacia Ejemplo",
+      "nif": "99999901H",
+      "direccion": "Calle Inventada 1, 28000 Madrid"
+    },
+    "cliente-001": {
+      "nombre": "Panadería Ejemplo, S.L.",
+      "nif": "B99999021",
+      "direccion": "Avenida Ficticia 22, 46000 Valencia"
+    }
+  },
+  "facturas": {
+    "01_mayorista_3paginas.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Varias páginas; el cuadre exige sumar 3 líneas de impuesto con RE y separar los gastos no sujetos.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "F99999112",
+        "receptor_nif": "99999901H",
+        "numero": "FM-2026-004512",
+        "fecha_emision": "2026-09-30",
+        "lineas_impuesto": [
+          {
+            "base": "6389.04",
+            "tipo_iva": "4",
+            "cuota_iva": "255.56",
+            "tipo_re": "0.5",
+            "cuota_re": "31.95"
+          },
+          {
+            "base": "1332.77",
+            "tipo_iva": "10",
+            "cuota_iva": "133.28",
+            "tipo_re": "1.4",
+            "cuota_re": "18.66"
+          },
+          {
+            "base": "2411.77",
+            "tipo_iva": "21",
+            "cuota_iva": "506.47",
+            "tipo_re": "5.2",
+            "cuota_re": "125.41"
+          }
+        ],
+        "otros_conceptos": [
+          {
+            "concepto": "Gastos bancarios",
+            "importe": "12.40"
+          }
+        ],
+        "retencion_irpf": null,
+        "total_factura": "11204.91",
+        "total_a_pagar": "11217.31",
+        "vencimientos": [
+          {
+            "fecha": "2026-10-10",
+            "importe": "900.00"
+          },
+          {
+            "fecha": "2026-11-30",
+            "importe": "10317.31"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES3799990001001111111111",
+        "referencias": {
+          "albaranes": [
+            "ALB-77001",
+            "ALB-77002",
+            "ALB-77003"
+          ],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "02_laboratorio.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Caso base. El descuento no convierte la factura en negativa.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "A99999120",
+        "receptor_nif": "99999901H",
+        "numero": "LI-26-0398",
+        "fecha_emision": "2026-10-02",
+        "lineas_impuesto": [
+          {
+            "base": "246.51",
+            "tipo_iva": "4",
+            "cuota_iva": "9.86",
+            "tipo_re": "0.5",
+            "cuota_re": "1.23"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "257.60",
+        "total_a_pagar": "257.60",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-01",
+            "importe": "257.60"
+          }
+        ],
+        "forma_pago": "giro",
+        "iban_proveedor": "ES9599990002002222222222",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "03_suministro_electrico_con_fianza.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Total a pagar menor que la base por la fianza: correcto. Una regla 'base <= total' daría un falso positivo.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "A99999138",
+        "receptor_nif": "99999901H",
+        "numero": "SE-2026-118833",
+        "fecha_emision": "2026-10-05",
+        "lineas_impuesto": [
+          {
+            "base": "191.27",
+            "tipo_iva": "21",
+            "cuota_iva": "40.17",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [
+          {
+            "concepto": "Devolución de fianza",
+            "importe": "-50.00"
+          }
+        ],
+        "retencion_irpf": null,
+        "total_factura": "231.44",
+        "total_a_pagar": "181.44",
+        "vencimientos": [
+          {
+            "fecha": "2026-10-12",
+            "importe": "181.44"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES5699990003003333333333",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "04_parafarmacia_escaneada.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "PDF sin capa de texto: va a visión. No se puede comprobar la evidencia contra texto; sí el cuadre.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999146",
+        "receptor_nif": "99999901H",
+        "numero": "CN-2026/0731",
+        "fecha_emision": "2026-09-18",
+        "lineas_impuesto": [
+          {
+            "base": "285.25",
+            "tipo_iva": "21",
+            "cuota_iva": "59.90",
+            "tipo_re": "5.2",
+            "cuota_re": "14.83"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "359.98",
+        "total_a_pagar": "359.98",
+        "vencimientos": [
+          {
+            "fecha": "2026-11-17",
+            "importe": "359.98"
+          }
+        ],
+        "forma_pago": "transferencia",
+        "iban_proveedor": "ES1799990004004444444444",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "05_prevencion_foto_movil.jpg": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Foto con perspectiva y sombra. Si se lee mal, por Telegram debe pedir reenviarla como archivo.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999161",
+        "receptor_nif": "99999901H",
+        "numero": "PR/26/1022",
+        "fecha_emision": "2026-10-01",
+        "lineas_impuesto": [
+          {
+            "base": "39.95",
+            "tipo_iva": "21",
+            "cuota_iva": "8.39",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "48.34",
+        "total_a_pagar": "48.34",
+        "vencimientos": [
+          {
+            "fecha": "2026-10-20",
+            "importe": "48.34"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES3699990006006666666666",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "06_duplicado_exacto_de_02.pdf": {
+      "estado": "duplicado",
+      "empresa": "principal",
+      "duplicado_de": "02_laboratorio.pdf",
+      "reglas": [
+        "duplicado_exacto_hash"
+      ],
+      "nota": "Mismo contenido byte a byte: se detecta por hash, sin llamar al modelo."
+    },
+    "07_duplicado_escaneado_de_02.pdf": {
+      "estado": "duplicado",
+      "empresa": "principal",
+      "reglas": [
+        "duplicado_misma_factura"
+      ],
+      "nota": "Mismo documento reenviado como escaneo (pasó en la Fase 1): no coincide el hash, sí NIF + número.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "A99999120",
+        "receptor_nif": "99999901H",
+        "numero": "LI-26-0398",
+        "fecha_emision": "2026-10-02",
+        "lineas_impuesto": [
+          {
+            "base": "246.51",
+            "tipo_iva": "4",
+            "cuota_iva": "9.86",
+            "tipo_re": "0.5",
+            "cuota_re": "1.23"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "257.60",
+        "total_a_pagar": "257.60",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-01",
+            "importe": "257.60"
+          }
+        ],
+        "forma_pago": "giro",
+        "iban_proveedor": "ES9599990002002222222222",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      },
+      "duplicado_de": "02_laboratorio.pdf"
+    },
+    "08_rectificativa_abono.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Total negativo y tipo rectificativa, con referencia a la factura que rectifica.",
+      "campos": {
+        "tipo": "rectificativa",
+        "emisor_nif": "A99999120",
+        "receptor_nif": "99999901H",
+        "numero": "LI-26-R012",
+        "fecha_emision": "2026-10-09",
+        "lineas_impuesto": [
+          {
+            "base": "-3.92",
+            "tipo_iva": "4",
+            "cuota_iva": "-0.16",
+            "tipo_re": "0.5",
+            "cuota_re": "-0.02"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "-4.10",
+        "total_a_pagar": "-4.10",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-01",
+            "importe": "-4.10"
+          }
+        ],
+        "forma_pago": "giro",
+        "iban_proveedor": "ES9599990002002222222222",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": "LI-26-0398"
+      }
+    },
+    "09_error_de_cuadre.pdf": {
+      "estado": "en_revision",
+      "empresa": "principal",
+      "reglas": [
+        "cuadre"
+      ],
+      "nota": "El total impreso lleva 10,00 € de más. Debe ir a revisión aunque el modelo lea bien.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999146",
+        "receptor_nif": "99999901H",
+        "numero": "CN-2026/0802",
+        "fecha_emision": "2026-10-06",
+        "lineas_impuesto": [
+          {
+            "base": "99.00",
+            "tipo_iva": "21",
+            "cuota_iva": "20.79",
+            "tipo_re": "5.2",
+            "cuota_re": "5.15"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "134.94",
+        "total_a_pagar": "134.94",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-05",
+            "importe": "134.94"
+          }
+        ],
+        "forma_pago": "transferencia",
+        "iban_proveedor": "ES1799990004004444444444",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "10_profesional_con_irpf.pdf": {
+      "estado": "registrada",
+      "empresa": "cliente-001",
+      "reglas": [],
+      "nota": "Asesoría: se asigna por el NIF del receptor. Total = base + IVA − retención.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "99999915D",
+        "receptor_nif": "B99999021",
+        "numero": "LE-2026-041",
+        "fecha_emision": "2026-10-03",
+        "lineas_impuesto": [
+          {
+            "base": "180.00",
+            "tipo_iva": "21",
+            "cuota_iva": "37.80",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": {
+          "tipo": "15",
+          "cuota": "27.00"
+        },
+        "total_factura": "190.80",
+        "total_a_pagar": "190.80",
+        "vencimientos": [
+          {
+            "fecha": "2026-10-18",
+            "importe": "190.80"
+          }
+        ],
+        "forma_pago": "transferencia",
+        "iban_proveedor": "ES7599990005005555555555",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "11_nif_emisor_invalido.pdf": {
+      "estado": "en_revision",
+      "empresa": "principal",
+      "reglas": [
+        "nif_emisor"
+      ],
+      "nota": "El NIF impreso tiene el dígito de control mal: puede ser un error de lectura o del emisor.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999170",
+        "receptor_nif": "99999901H",
+        "numero": "ERR-0001",
+        "fecha_emision": "2026-10-07",
+        "lineas_impuesto": [
+          {
+            "base": "95.00",
+            "tipo_iva": "21",
+            "cuota_iva": "19.95",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "114.95",
+        "total_a_pagar": "114.95",
+        "vencimientos": [
+          {
+            "fecha": "2026-11-06",
+            "importe": "114.95"
+          }
+        ],
+        "forma_pago": "transferencia",
+        "iban_proveedor": "ES9499990007007777777777",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "12_receptor_desconocido.pdf": {
+      "estado": "en_revision",
+      "empresa": null,
+      "reglas": [
+        "nif_receptor"
+      ],
+      "nota": "No es de ninguna empresa del cliente. Por Telegram debe preguntar de quién es.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "A99999120",
+        "receptor_nif": "B99999039",
+        "numero": "LI-26-0412",
+        "fecha_emision": "2026-10-08",
+        "lineas_impuesto": [
+          {
+            "base": "31.00",
+            "tipo_iva": "4",
+            "cuota_iva": "1.24",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "32.24",
+        "total_a_pagar": "32.24",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-07",
+            "importe": "32.24"
+          }
+        ],
+        "forma_pago": "transferencia",
+        "iban_proveedor": "ES9599990002002222222222",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "13_fecha_futura.pdf": {
+      "estado": "en_revision",
+      "empresa": "principal",
+      "reglas": [
+        "fecha_emision"
+      ],
+      "nota": "Fecha posterior a hoy (el juego se generó el 20-10-2026; ajustar si se corre más tarde).",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999161",
+        "receptor_nif": "99999901H",
+        "numero": "PR/26/1299",
+        "fecha_emision": "2026-12-15",
+        "lineas_impuesto": [
+          {
+            "base": "34.60",
+            "tipo_iva": "21",
+            "cuota_iva": "7.27",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "41.87",
+        "total_a_pagar": "41.87",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-20",
+            "importe": "41.87"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES3699990006006666666666",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "14_publicidad_no_factura.pdf": {
+      "estado": "no_factura",
+      "empresa": null,
+      "reglas": [],
+      "nota": "Publicidad del mismo proveedor que la 01: no debe registrarse ni perderse (visible en la plataforma)."
+    },
+    "15_logo_firma_correo.png": {
+      "estado": "descartado_sin_modelo",
+      "empresa": null,
+      "reglas": [],
+      "nota": "Imagen pequeña de una firma de correo: se descarta antes de llamar al modelo, con registro."
+    },
+    "16_facturae.xml": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Se lee con el parser, sin IA: coste 0.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999146",
+        "receptor_nif": "99999901H",
+        "numero": "XML-2026000017",
+        "fecha_emision": "2026-10-10",
+        "lineas_impuesto": [
+          {
+            "base": "132.00",
+            "tipo_iva": "21",
+            "cuota_iva": "27.72",
+            "tipo_re": "5.2",
+            "cuota_re": "6.86"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "166.58",
+        "total_a_pagar": "166.58",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-09",
+            "importe": "166.58"
+          }
+        ],
+        "forma_pago": "transferencia",
+        "iban_proveedor": "ES1799990004004444444444",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      },
+      "sin_modelo": true
+    },
+    "17_vencimiento_anticipado.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [
+        "aviso:vencimiento_anterior"
+      ],
+      "nota": "Pasó en la Fase 1 y era correcto: se registra con aviso, no se bloquea.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "F99999112",
+        "receptor_nif": "99999901H",
+        "numero": "FM-2026-004600",
+        "fecha_emision": "2026-10-10",
+        "lineas_impuesto": [
+          {
+            "base": "263.12",
+            "tipo_iva": "4",
+            "cuota_iva": "10.52",
+            "tipo_re": "0.5",
+            "cuota_re": "1.32"
+          },
+          {
+            "base": "237.27",
+            "tipo_iva": "10",
+            "cuota_iva": "23.73",
+            "tipo_re": "1.4",
+            "cuota_re": "3.32"
+          },
+          {
+            "base": "164.42",
+            "tipo_iva": "21",
+            "cuota_iva": "34.53",
+            "tipo_re": "5.2",
+            "cuota_re": "8.55"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "746.78",
+        "total_a_pagar": "746.78",
+        "vencimientos": [
+          {
+            "fecha": "2026-10-01",
+            "importe": "746.78"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES3799990001001111111111",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "18_recurrente_agosto.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Mismo importe cada mes: no es un duplicado (número y fecha distintos).",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999161",
+        "receptor_nif": "99999901H",
+        "numero": "PR/26/0822",
+        "fecha_emision": "2026-08-01",
+        "lineas_impuesto": [
+          {
+            "base": "39.95",
+            "tipo_iva": "21",
+            "cuota_iva": "8.39",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "48.34",
+        "total_a_pagar": "48.34",
+        "vencimientos": [
+          {
+            "fecha": "2026-08-20",
+            "importe": "48.34"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES3699990006006666666666",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "19_recurrente_septiembre.pdf": {
+      "estado": "registrada",
+      "empresa": "principal",
+      "reglas": [],
+      "nota": "Mismo importe cada mes: no es un duplicado (número y fecha distintos).",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "B99999161",
+        "receptor_nif": "99999901H",
+        "numero": "PR/26/0922",
+        "fecha_emision": "2026-09-01",
+        "lineas_impuesto": [
+          {
+            "base": "39.95",
+            "tipo_iva": "21",
+            "cuota_iva": "8.39",
+            "tipo_re": "0",
+            "cuota_re": "0.00"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "48.34",
+        "total_a_pagar": "48.34",
+        "vencimientos": [
+          {
+            "fecha": "2026-09-20",
+            "importe": "48.34"
+          }
+        ],
+        "forma_pago": "domiciliacion",
+        "iban_proveedor": "ES3699990006006666666666",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    },
+    "20_posible_duplicado_de_02.pdf": {
+      "estado": "en_revision",
+      "empresa": "principal",
+      "reglas": [
+        "posible_duplicado"
+      ],
+      "nota": "Mismo NIF, fecha y total que la 02 con otro número: una persona decide.",
+      "campos": {
+        "tipo": "factura",
+        "emisor_nif": "A99999120",
+        "receptor_nif": "99999901H",
+        "numero": "LI-26-0399",
+        "fecha_emision": "2026-10-02",
+        "lineas_impuesto": [
+          {
+            "base": "246.51",
+            "tipo_iva": "4",
+            "cuota_iva": "9.86",
+            "tipo_re": "0.5",
+            "cuota_re": "1.23"
+          }
+        ],
+        "otros_conceptos": [],
+        "retencion_irpf": null,
+        "total_factura": "257.60",
+        "total_a_pagar": "257.60",
+        "vencimientos": [
+          {
+            "fecha": "2026-12-01",
+            "importe": "257.60"
+          }
+        ],
+        "forma_pago": "giro",
+        "iban_proveedor": "ES9599990002002222222222",
+        "referencias": {
+          "albaranes": [],
+          "pedidos": []
+        },
+        "factura_rectificada": null
+      }
+    }
+  }
+}

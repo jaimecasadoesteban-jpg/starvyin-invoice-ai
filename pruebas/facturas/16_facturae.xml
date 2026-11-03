@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Factura FICTICIA para probar el parser. Sin firma XAdES. -->
+<fe:Facturae xmlns:fe="http://www.facturae.gob.es/formato/Versiones/Facturaev3_2_2.xml">
+<FileHeader><SchemaVersion>3.2.2</SchemaVersion><Modality>I</Modality><InvoiceIssuerType>EM</InvoiceIssuerType>
+<Batch><BatchIdentifier>B99999146XML-2026000017</BatchIdentifier><InvoicesCount>1</InvoicesCount>
+<TotalInvoicesAmount><TotalAmount>166.58</TotalAmount></TotalInvoicesAmount>
+<TotalOutstandingAmount><TotalAmount>166.58</TotalAmount></TotalOutstandingAmount>
+<TotalExecutableAmount><TotalAmount>166.58</TotalAmount></TotalExecutableAmount>
+<InvoiceCurrencyCode>EUR</InvoiceCurrencyCode></Batch></FileHeader>
+<Parties><SellerParty><TaxIdentification><PersonTypeCode>J</PersonTypeCode><ResidenceTypeCode>R</ResidenceTypeCode><TaxIdentificationNumber>B99999146</TaxIdentificationNumber></TaxIdentification><LegalEntity><CorporateName>Cosmética Natural de Mentira, S.L.</CorporateName><AddressInSpain><Address>Calle Aloe 9, 50000 Zaragoza</Address><PostCode>28000</PostCode><Town>Madrid</Town><Province>Madrid</Province><CountryCode>ESP</CountryCode></AddressInSpain></LegalEntity></SellerParty><BuyerParty><TaxIdentification><PersonTypeCode>F</PersonTypeCode><ResidenceTypeCode>R</ResidenceTypeCode><TaxIdentificationNumber>99999901H</TaxIdentificationNumber></TaxIdentification><LegalEntity><CorporateName>Farmacia Ejemplo</CorporateName><AddressInSpain><Address>Calle Inventada 1, 28000 Madrid</Address><PostCode>28000</PostCode><Town>Madrid</Town><Province>Madrid</Province><CountryCode>ESP</CountryCode></AddressInSpain></LegalEntity></BuyerParty></Parties>
+<Invoices><Invoice>
+<InvoiceHeader><InvoiceNumber>2026000017</InvoiceNumber><InvoiceSeriesCode>XML</InvoiceSeriesCode>
+<InvoiceDocumentType>FC</InvoiceDocumentType><InvoiceClass>OO</InvoiceClass></InvoiceHeader>
+<InvoiceIssueData><IssueDate>2026-10-10</IssueDate><InvoiceCurrencyCode>EUR</InvoiceCurrencyCode>
+<TaxCurrencyCode>EUR</TaxCurrencyCode><LanguageName>es</LanguageName></InvoiceIssueData>
+<TaxesOutputs><Tax><TaxTypeCode>01</TaxTypeCode><TaxRate>21.00</TaxRate><TaxableBase><TotalAmount>132.00</TotalAmount></TaxableBase><TaxAmount><TotalAmount>27.72</TotalAmount></TaxAmount><EquivalenceSurcharge>5.20</EquivalenceSurcharge><EquivalenceSurchargeAmount><TotalAmount>6.86</TotalAmount></EquivalenceSurchargeAmount></Tax></TaxesOutputs>
+<InvoiceTotals><TotalGrossAmount>132.00</TotalGrossAmount><TotalGrossAmountBeforeTaxes>132.00</TotalGrossAmountBeforeTaxes>
+<TotalTaxOutputs>34.58</TotalTaxOutputs><TotalTaxesWithheld>0.00</TotalTaxesWithheld>
+<InvoiceTotal>166.58</InvoiceTotal><TotalOutstandingAmount>166.58</TotalOutstandingAmount>
+<TotalExecutableAmount>166.58</TotalExecutableAmount></InvoiceTotals>
+<Items><InvoiceLine><ArticleCode>P201</ArticleCode><ItemDescription>Sérum vitamina C 30 ml</ItemDescription><Quantity>6</Quantity><UnitPriceWithoutTax>14.200000</UnitPriceWithoutTax><TotalCost>85.200000</TotalCost><GrossAmount>85.200000</GrossAmount><TaxesOutputs><Tax><TaxTypeCode>01</TaxTypeCode><TaxRate>21.00</TaxRate><TaxableBase><TotalAmount>85.20</TotalAmount></TaxableBase></Tax></TaxesOutputs></InvoiceLine><InvoiceLine><ArticleCode>P202</ArticleCode><ItemDescription>Bálsamo labial 4 g</ItemDescription><Quantity>24</Quantity><UnitPriceWithoutTax>1.950000</UnitPriceWithoutTax><TotalCost>46.800000</TotalCost><GrossAmount>46.800000</GrossAmount><TaxesOutputs><Tax><TaxTypeCode>01</TaxTypeCode><TaxRate>21.00</TaxRate><TaxableBase><TotalAmount>46.80</TotalAmount></TaxableBase></Tax></TaxesOutputs></InvoiceLine></Items>
+<PaymentDetails><Installment><InstallmentDueDate>2026-12-09</InstallmentDueDate><InstallmentAmount>166.58</InstallmentAmount><PaymentMeans>04</PaymentMeans><AccountToBeCredited><IBAN>ES1799990004004444444444</IBAN></AccountToBeCredited></Installment></PaymentDetails>
+</Invoice></Invoices>
+</fe:Facturae>
